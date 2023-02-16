@@ -17,16 +17,8 @@ async function commentAuthenticate(req, res, next) {
   }
 }
 
-async function isAuthenticatedHome(req, res, next) {
-  if (req.isAuthenticated()) {
-    next();
-  } else {
-    next();
-  }
-}
-
 module.exports = {
   isAuthenticated,
   commentAuthenticate,
-  isAuthenticatedHome,
 };
+// && req.user.roleId === 4

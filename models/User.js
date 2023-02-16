@@ -1,4 +1,4 @@
-const { Sequelize, Model, DataTypes } = require("sequelize");
+const { Sequelize, Model, DataTypes, TINYINT } = require("sequelize");
 
 class User extends Model {
   static initModel(sequelize) {
