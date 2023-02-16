@@ -2,7 +2,7 @@ const { Article } = require("../models");
 const { User } = require("../models");
 
 async function isAuthenticated(req, res, next) {
-  if (req.isAuthenticated() && req.user.roleId === 4) {
+  if (req.isAuthenticated() && req.user.roleId >= 2) {
     next();
   } else {
     res.redirect("/login");

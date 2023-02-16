@@ -58,7 +58,7 @@ async function deleteArticle(req, res) {
   const deleteArticle = await Article.destroy({
     where: { id: req.params.id },
   });
-  return res.redirect("/admin");
+  return res.redirect("/writer");
 }
 
 module.exports = {
