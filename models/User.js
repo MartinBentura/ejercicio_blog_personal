@@ -24,6 +24,12 @@ class User extends Model {
         password: {
           type: DataTypes.STRING,
         },
+        roleId: {
+          type: DataTypes.TINYINT,
+        },
+        role: {
+          type: DataTypes.STRING,
+        },
       },
       {
         sequelize,

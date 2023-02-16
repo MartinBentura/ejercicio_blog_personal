@@ -12,6 +12,8 @@ module.exports = async function userSeeder() {
       email: faker.internet.email(),
       username: faker.internet.userName(),
       password: await bcrypt.hash("1234", 8),
+      roleId: 1,
+      role: "User",
     },
     {
       firstname: "Claude",
@@ -19,6 +21,8 @@ module.exports = async function userSeeder() {
       email: faker.internet.email(),
       username: faker.internet.userName(),
       password: await bcrypt.hash("1234", 8),
+      roleId: 2,
+      role: "Writer",
     },
     {
       firstname: "Tolouse",
@@ -26,6 +30,8 @@ module.exports = async function userSeeder() {
       email: faker.internet.email(),
       username: faker.internet.userName(),
       password: await bcrypt.hash("1234", 8),
+      roleId: 3,
+      role: "Editor",
     },
     {
       firstname: "Pepe",
@@ -33,6 +39,8 @@ module.exports = async function userSeeder() {
       email: faker.internet.email(),
       username: faker.internet.userName(),
       password: await bcrypt.hash("1234", 8),
+      roleId: 4,
+      role: "Admin",
     },
   ];
   await User.bulkCreate(users);

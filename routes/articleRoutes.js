@@ -6,11 +6,12 @@ const userController = require("../controllers/userController");
 const loginController = require("../controllers/loginController");
 const { isAuthenticated } = require("../middlewares/isAuthenticated");
 const { commentAuthenticate } = require("../middlewares/isAuthenticated");
+const makeUserAvailableInViews = require("../middlewares/makeUserAvailableInViews");
 
 router.get("/login", loginController.loginIndex);
 router.post("/login", loginController.login);
 
-router.get("/", mainController.index);
+router.get("/", makeUserAvailableInViews, mainController.index);
 router.get("/articulo/:id", mainController.selectArticle);
 
 // AuTH COMMENTS

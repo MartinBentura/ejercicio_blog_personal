@@ -18,9 +18,10 @@
           <a href="/login" class="btn btn-success me-2" style="margin-left: auto" type="submit">
             Login
           </a>
+          <%if(!user || user.roleId !==4){}else{%>
           <a href="/admin" class="btn btn-primary" style="margin-left: auto" type="submit">
-            Admin
-          </a>
+            Admin </a
+          ><%}%>
         </div>
       </div>
     </div>
